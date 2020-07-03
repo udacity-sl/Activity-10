@@ -10,8 +10,6 @@ import Foundation
 
 class APICalls {
     
-    private static var accountKey = ""
-    
     static func login (_ username : String!, _ password : String!, completion: @escaping (Bool, String, Error?)->()) {
         
         var request = URLRequest(url: URL(string: "https://onthemap-api.udacity.com/v1/session")!)
@@ -45,15 +43,12 @@ class APICalls {
                 debugPrint(String(data: newData!, encoding: .utf8)!)
                 
                 //TODO: Initialize a JSONDecoder object
-                let decoder = JSONDecoder()
                 
                 //TODO: Convert the newData! to a User.self object
                 do {
-                    let user = try decoder.decode(User.self, from: newData!)
-                    //Get the unique key of the user
-                    let uniqueKey = user.account?.key ?? ""
-                    APICalls.accountKey = uniqueKey
-                    completion (true, uniqueKey, nil)
+                    
+                    //TODO: Get the unique key of the user and save it locally for later
+                    
                 } catch {
                     debugPrint(error)
                     completion (false, "nil", nil)
@@ -61,7 +56,6 @@ class APICalls {
                 
             } else {
                 //TODO: call the completion handler properly
-                completion(false, "", NSError(domain: "status_code", code: statusCode, userInfo: nil))
             }
         }
         //Start the task
@@ -96,15 +90,8 @@ class APICalls {
                 //Get an object based on the received data in JSON format
                 let decoder = JSONDecoder()
                 
-                //TODO: Convert data to an object (you should create a model that holds an array of [StudentLocation])
-                do {
-                    let locationsResponse = try decoder.decode(StudentLocationsResult.self, from: data!)
-                    //TODO: call completion on the results
-                    completion(locationsResponse.results, nil)
-                } catch {
-                    debugPrint(error)
-                    completion(nil, error)
-                }
+                //TODO: Convert data to an object inside do,catch (you should create a model that holds an array of [StudentLocation])
+                
             }
         }
         

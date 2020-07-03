@@ -15,8 +15,6 @@
 		33934732218EFE8400E2242E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33934730218EFE8400E2242E /* LaunchScreen.storyboard */; };
 		3393473A218F27BC00E2242E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33934739218F27BC00E2242E /* MapViewController.swift */; };
 		33FE2947219AE0E9009F78F2 /* APICalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE2946219AE0E9009F78F2 /* APICalls.swift */; };
-		D65C701924AF36D10010730D /* StudentLocationsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65C701824AF36D10010730D /* StudentLocationsResult.swift */; };
-		D65C701B24AF377C0010730D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65C701A24AF377C0010730D /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +28,6 @@
 		33934733218EFE8400E2242E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33934739218F27BC00E2242E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		33FE2946219AE0E9009F78F2 /* APICalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICalls.swift; sourceTree = "<group>"; };
-		D65C701824AF36D10010730D /* StudentLocationsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationsResult.swift; sourceTree = "<group>"; };
-		D65C701A24AF377C0010730D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				3314B7CD2198226A0055B966 /* StudentLocation.swift */,
-				D65C701824AF36D10010730D /* StudentLocationsResult.swift */,
-				D65C701A24AF377C0010730D /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,10 +171,8 @@
 				3314B7CE2198226A0055B966 /* StudentLocation.swift in Sources */,
 				3393472A218EFE8200E2242E /* LoginViewController.swift in Sources */,
 				3393473A218F27BC00E2242E /* MapViewController.swift in Sources */,
-				D65C701924AF36D10010730D /* StudentLocationsResult.swift in Sources */,
 				33FE2947219AE0E9009F78F2 /* APICalls.swift in Sources */,
 				33934728218EFE8100E2242E /* AppDelegate.swift in Sources */,
-				D65C701B24AF377C0010730D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
             
             APICalls.login(username, password){(loginSuccess, key, error) in
                 //TODO: Execute the entire code inside the completion body on the main thread asynchronous
-                DispatchQueue.main.async {
+                
                     if error != nil {
                         let errorAlert = UIAlertController(title: "Erorr performing request", message: "There was an error performing your request", preferredStyle: .alert )
                         
@@ -61,7 +61,7 @@ class LoginViewController: UIViewController {
                         print ("the key is \(key)")
                     }
                 }
-            }
+            
         }
     }
 }
