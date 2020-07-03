@@ -22,15 +22,14 @@ class APICalls {
         let task = session.dataTask(with: request) { data, response, error in
             if error != nil {
                 // TODO: Call the completion handler and send the error so it can be handled on the UI, also call "return" so the code next to this block won't be executed
-                completion(false, "", error)
+                
             }
             
             //Get the status code to check if the response is OK or not
             guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
-                
                 // TODO: Call the completion handler and send the error so it can be handled on the UI, also call "return" so the code next to this block won't be executed (you need to call return in let guard's else body anyway)
-                completion(false, "", error)
-                return
+                
+                
             }
             
             if statusCode >= 200  && statusCode < 300 {
